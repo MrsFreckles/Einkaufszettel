@@ -18,6 +18,10 @@ public class Einkaufsliste {
                 addToList(input.substring(3));
             } else if (input.startsWith("remove") || input.startsWith("Remove")) {
                 removeFromList(input.substring(6));
+            } else if (input.startsWith("help") || input.startsWith("Help")) {
+                System.out.println("Commands: list, add [item], remove [item], exit");
+            } else if (input.isEmpty()) {
+                System.out.println("Please enter a command!");
             } else {
                 System.out.println("Unknown command");
             }
