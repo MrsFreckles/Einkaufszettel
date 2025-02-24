@@ -53,9 +53,10 @@ public class Einkaufsliste {
     public void removeFromList(String item) {
         if(item.isEmpty()) {
             System.out.println("Please enter an item to remove!");
-        } else {
-            einkaufsliste.remove(item);
+        } else if (einkaufsliste.remove(item)) {
             System.out.println("Removed " + item + " from the list.");
+        } else {
+            System.out.println("Item not found in the list.");
         }
     }
 }
